@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+
+    "name" : "Sorting validator extension",
+    "description":"Verifies if items are sorted",
+    "version": "0.1",
+    "permissions": [
+      "activeTab"
+    ],
+    "background": {
+      "scripts": ["jquery.js", "popup.js"],
+      "persistent":false
+    },
+    "content_scripts": [
+      {
+        "matches":["*://*/*"],
+        "css":["styles.css"],
+        "js": ["jquery.js", "popup.js"]
+    }
+    ],
+    "browser_action": {
+      "default_icon": "duck-icon.png",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
