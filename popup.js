@@ -7,15 +7,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   button.addEventListener('click', function() {
     var css_selector = document.getElementById('css_selector').value;
+    var regex = RegExp(document.getElementById('regex').value);
     var price = 0;
-    regex = /\d+\.\d+/;
+    var nextPrice = 0;
 
     chrome.tabs.getSelected(null, function(tab) {
       chrome.tabs.executeScript({
-      code: "alert($('" + css_selector + "')[0].textContent);"
-      + "for (i=0;i<$('" + css_selector + ":visible').length - 1; i++)"
-      + "{    price = $('" + css_selector + ":visible')[i].textContent;"
-      + "    alert(price);"
+      code: "var regex=" + regex.toString() + ";"
+      + "var element = $('" + css_selector + ":visible');"
+      //+ "alert(element[0].textContent);"
+      + "for (i=0;i<element.length - 1; i++)"
+      + "{    price = element[i].textContent;"
+      + "     price = regex.exec(price);"
+      //+ "     alert(price);"
+      + "     nextPrice = element[i+1].textContent;"
+      + "     nextPrice = regex.exec(nextPrice);"
+      + "     console.log('price    : ' + price);"
+      + "     console.log('nextPrice: ' + nextPrice);"
+      + "     if (nextPrice < price) { element.eq(i+1).css({'border-color':'red','border-width':'2px','border-style':'dotted'}); }"
       + "};"
     });
   });

@@ -1,0 +1,24 @@
+*
+{
+  font-family: 'DejaVu Sans';
+}
+button
+{
+  background-color: #ccc;
+  border-syle: solid;
+  padding: 2px 6px;
+  border-color: #ccc;
+  border-width: 1px;
+}
+input
+{
+  border-width: 0 0 1.5px 0;
+  border-color: #444;
+  outline: none;
+  margin: 6px 4px;
+}
+input:focus
+{
+  border-width: 0 0 2px 0;
+  border-color: #333;
+}
