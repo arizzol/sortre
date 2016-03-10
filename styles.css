@@ -1,57 +1,73 @@
 *
 {
-  font-family: 'DejaVu Sans';
+  font-family: 'DejaVu Sans', sans-serif;
 }
 
+body
+{
+  background-color: #fff;
+}
 form
 {
   overflow: hidden;
-  width: 160px;
+  width: 220px;
+  height: 190px;
 }
 button
 {
-  background-color: #ccc;
-  border-syle: solid;
+  font-family: 'DejaVu Sans', sans-serif;
+  background-color: #333;
+  color:#ccc;
+  border: 1px solid #ccc;
   padding: 2px 6px;
   border-color: #ccc;
   border-width: 1px;
 }
+
 label
 {
-  transition: background 0.1s, color 0.1s, top 0.1s, bottom 0.1s, right 0.1s, left 0.1s;
+  transition: background 0.25s, color 0.25s, top 0.1s, bottom 0.1s, right 0.15s, left 0.1s,;
   position: relative;
-  top: -24px;
-  left: 2px;
+  top: -28px;
   z-index: 2;
+  padding: 4px 6px;
+  margin: 4px 5px;
+  color: #ccc;
 }
 input
 {
   display: block;
-  position: relative;
-  top: 0;
-  left: 0;
+  position:relative;
   width: 100%;
   border-width: 0 0 1.5px 0;
   border-color: #444;
   outline: none;
   margin: 6px 4px;
+  padding: 2px 3px;
   z-index: 1;
+}
+
+div
+{
+  height: 44px;
+  margin:0;
+  padding:0;
 }
 
 input:focus
 {
-  border-color: #f06d06;
+  border-color: #444;
 }
-input:focus + label
+input:focus + label, input:valid + label
 {
-  padding: 2px 3px;
+  float:right;
+  text-align: center;
   border-color: #333;
-  background-color: #f06d06;
-  font-size: 80%;
-  left: 52%;
-  min-height: 40px;
-  margin-right: 0;
-  width: 40%;
-  text-transform: uppercasel
-  z-index: 100;
+  background-color: #444;
+  color: #ccc;
+  font-size: 64%;
+  margin-right:0px;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 2
 }

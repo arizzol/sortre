@@ -14,7 +14,7 @@
     "content_scripts": [
       {
         "matches":["*://*/*"],
-        "css":["styles.css"],
+        
         "js": ["jquery.js", "popup.js"]
     }
     ],
