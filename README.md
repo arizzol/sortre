@@ -19,4 +19,4 @@ Chrome extension that verifies if items are sorted correctly in a table
 This extension is still in beta, so bugs are expected
 
 <h3>License</h3>
-<a href=" http://arizzol.mit-license.org/">MIT License</a>
+[MIT License](http://arizzol.mit-license.org/)
